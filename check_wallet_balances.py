@@ -10,7 +10,7 @@ import os
 load_dotenv()
 
 # Retrieve API keys from environment variables
-ETHERSCAN_API_KEY = os.getenv('ETHERSCAN_API_KEY')
+ = os.getenv('ETHERSCAN_API_KEY')
 POLYGONSCAN_API_KEY = os.getenv('POLYGONSCAN_API_KEY')
 BSCSCAN_API_KEY = os.getenv('BSCSCAN_API_KEY')
 ARBISCAN_API_KEY = os.getenv('ARBISCAN_API_KEY')
@@ -41,8 +41,8 @@ TOKEN_CONTRACTS = {
         'ethereum': '0xdAC17F958D2ee523a2206206994597C13D831ec7',
         'polygon': '0xc2132D05D31c914a87C6611C10748AEb04B58e8F',
         'binance': '0x55d398326f99059fF775485246999027B3197955',
-        'arbitrum': '0xfd086bc7cd5c481dcc9c85eb53a24cc94d29f104',
-        'optimism': '0x4200000000000000000000000000000000000042',
+        'arbitrum': '0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9',
+        'optimism': '0x94b008aA00579c1307B0EF2c499aD98a8ce58e58t',
     },
     'USDC': {
         'ethereum': '0xA0b86991c6218B36c1d19D4a2e9Eb0cE3606EB48',
