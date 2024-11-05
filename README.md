@@ -31,5 +31,9 @@ python3 check_wallet_balances.py
 
 The script will begin checking the balances of your wallets across multiples chains and coins. 
 
+# Future Updates
+* Automating loading of wallets into CSV file.
+* Improving CSV formatting.
+* Potential dashboard (if I get time). 
 
 
