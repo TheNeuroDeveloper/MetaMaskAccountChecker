@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Get MetaMask Addresses</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+</head>
+<body>
+    <h1>Retrieve MetaMask Addresses</h1>
+    <button onclick="getAccounts()">Get Accounts</button>
+    <ul id="accountList"></ul>
+
+    <script type="text/javascript">
+        async function getAccounts() {
+            // Check if MetaMask is installed
+            if (typeof window.ethereum !== 'undefined') {
+                // Request account access if needed
+                await window.ethereum.request({ method: 'eth_requestAccounts' });
+                
+                // Create a web3 instance
+                const web3 = new Web3(window.ethereum);
+
+                try {
+                    // Get the list of accounts
+                    const accounts = await web3.eth.getAccounts();
+                    
+                    // Display the accounts
+                    const accountList = document.getElementById('accountList');
+                    accountList.innerHTML = '';
+                    accounts.forEach(account => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = account;
+                        accountList.appendChild(listItem);
+                    });
+                } catch (error) {
+                    console.error('Error fetching accounts:', error);
+                }
+            } else {
+                alert('MetaMask is not installed');
+            }
+        }
+    </script>
+</body>
+</html>
