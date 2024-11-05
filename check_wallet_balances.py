@@ -4,6 +4,7 @@ from web3 import Web3
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.util.retry import Retry
 from dotenv import load_dotenv
+import os
 
 # Load environment variables from .env file
 load_dotenv()
